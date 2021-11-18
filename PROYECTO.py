@@ -1,5 +1,5 @@
 '''
-
+hola josee
 PROTOTIPO DE PROYECTO PROGRAMADO (uso de archivo csv)
 Programa principal
 
