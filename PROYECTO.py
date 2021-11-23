@@ -1,10 +1,9 @@
 '''
-hola josee
-hola cindy
-PROTOTIPO DE PROYECTO PROGRAMADO (uso de archivo csv)
-Programa principal
 
-hola carlos
+MASTER EDUCATION (uso de archivo csv)
+Programa principal
+Cindy Gualim
+Jo´se Santisteban
 
 '''
 
