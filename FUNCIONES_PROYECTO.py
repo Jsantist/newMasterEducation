@@ -202,6 +202,223 @@ def Lenguaje(personas,correo,df):
             
             user['Tokens']=str(nV)
     
+def Ingles (personas,correo,df):
+    cont=int(df.loc[[correo],'Examenes hechos'])
+    cont= cont +1
+    df.loc[[correo],'Examenes hechos']=cont
+    df.to_csv('ESTADISTICAS.csv')
+    print('-----------INGLES----------')
+    print('Cada respuesta correcta vale 5 tokens, haciendo un total de 25 tokens por examen')
+    p1=0
+    p2=0
+    p3=0
+    p4=0
+    p5=0
+    tk=0
+    
+    
+    p1=int(input('You can climb it. Sometimes you can see snow on the top of it '))
+    print("1. waterfall")
+    print("2. mountain")
+    print("3. cave/n")
+    if p1==2:
+        tk=tk+1
+        
+    p2=int(input('It´s sometimes under the ground. It´s dark inside it.'))
+    print("1. cave")
+    print("2. island")
+    print("3. jungle/n")
+    if p2==1:
+        tk=tk+1
+        
+    p3=int(input('it´s very hot here and it rains every day '))
+    print("1. island")
+    print("2. waterfall")
+    print("3. jungle/n")
+    if p3==3:
+        tk=tk+1
+        
+    p4=int(input('Its´s a place with sea all around it'))
+    print("1. mountain")
+    print("2. island")
+    print("3. waterfall/n")
+    if p4==2:
+        tk=tk+1
+        
+    p5=int(input('It can be very loud. It´s a place where water from a river comes down quickly over rocks or into a lake. '))
+    print("1. jungle")
+    print("2. cave")
+    print("3. waterfall/n")
+    if p5==3:
+        tk=tk+1
+    print('su puntuaje total fue de: \n',tk,'/5')
+    if tk>=3:
+        print('Usted ha aprobado el exámen')
+        cont=int(df.loc[[correo],'Examenes aprovados'])
+        cont= cont +1
+        df.loc[[correo],'Examenes aprovados']=cont
+        df.to_csv('ESTADISTICAS.csv')
+    else:
+        print('Usted ha reporbado el exámen')
+        cont=int(df.loc[[correo],'Examenes reprobados'])
+        cont= cont +1
+        df.loc[[correo],'Examenes reprobados']=cont
+        df.to_csv('ESTADISTICAS.csv')
+    tO=tk*5 
+    
+    for user in personas:
+        if user['Correo']==correo :
+            vA= int(user['Tokens'])
+            print('Tokens actuales: ', vA)
+            print('Sus tokens obtenidos fueron: ',tO)
+            nV = vA + tO
+            print('Su nuevo puntuaje de tokens es de: ', nV)
+            
+            user['Tokens']=str(nV)
+            
+def sociales(personas,correo,df):
+    cont=int(df.loc[[correo],'Examenes hechos'])
+    cont= cont +1
+    df.loc[[correo],'Examenes hechos']=cont
+    df.to_csv('ESTADISTICAS.csv')
+    print('-----------SOCIALES----------')
+    print('Cada respuesta correcta vale 5 tokens, haciendo un total de 25 tokens por examen')
+    p1=0
+    p2=0
+    p3=0
+    p4=0
+    p5=0
+    tk=0
+    
+    
+    p1=int(input('el _____ de septiembre se celebra la independencia de Guatemala'))
+    if p1==15:
+        tk=tk+1
+        
+    p2=int(input('Quién conquistó américa?.'))
+    print("1. Leo Messi")
+    print("2. Cristobal Colón")
+    print("3. Giamattei/n")
+    if p2==2:
+        tk=tk+1
+        
+    p3=int(input('Sociales es la formación _______'))
+    print("1. cultural")
+    print("2. personal")
+    print("3. Ciudadana/n")
+    if p3==3:
+        tk=tk+1
+        
+    p4=int(input('Quién ya no pertenece a Guatemala'))
+    print("1. Petén")
+    print("2. Belice")
+    print("3. Izabal/n")
+    if p4==2:
+        tk=tk+1
+        
+    p5=int(input('Que mito se ha descubierto sobre un supuesto guerrero'))
+    print("1. El Quetzal")
+    print("2. Conquista")
+    print("3. Tecún Human/n")
+    if p5==3:
+        tk=tk+1
+    print('su puntuaje total fue de: \n',tk,'/5')
+    if tk>=3:
+        print('Usted ha aprobado el exámen')
+        cont=int(df.loc[[correo],'Examenes aprovados'])
+        cont= cont +1
+        df.loc[[correo],'Examenes aprovados']=cont
+        df.to_csv('ESTADISTICAS.csv')
+    else:
+        print('Usted ha reporbado el exámen')
+        cont=int(df.loc[[correo],'Examenes reprobados'])
+        cont= cont +1
+        df.loc[[correo],'Examenes reprobados']=cont
+        df.to_csv('ESTADISTICAS.csv')
+    tO=tk*5 
+    
+    for user in personas:
+        if user['Correo']==correo :
+            vA= int(user['Tokens'])
+            print('Tokens actuales: ', vA)
+            print('Sus tokens obtenidos fueron: ',tO)
+            nV = vA + tO
+            print('Su nuevo puntuaje de tokens es de: ', nV)
+            
+            user['Tokens']=str(nV)
+            
+            
+def Artes(personas,correo,df):
+    cont=int(df.loc[[correo],'Examenes hechos'])
+    cont= cont +1
+    df.loc[[correo],'Examenes hechos']=cont
+    df.to_csv('ESTADISTICAS.csv')
+    print('-----------ARTES----------')
+    print('Cada respuesta correcta vale 5 tokens, haciendo un total de 25 tokens por examen')
+    p1=0
+    p2=0
+    p3=0
+    p4=0
+    p5=0
+    tk=0
+    
+    
+    p1=int(input('Cuantos años tardó Leonardo da Vinci en pintar la mona lisa'))
+    if p1==4:
+        tk=tk+1
+        
+    p2=int(input('Quién de estos fue un artista muy enfermo'))
+    print("1. picasso")
+    print("2. Beethoven")
+    print("3. Frida Kahlo/n")
+    if p2==2:
+        tk=tk+1
+        
+    p3=int(input('. ¿cómo es conocidad la mujer de ‘La joven de la perla’ de Johannes Vermeer?'))
+    print("1. cultural")
+    print("2. reina")
+    print("3. Mona Lisa Holandesa/n")
+    if p3==3:
+        tk=tk+1
+        
+    p4=int(input('la pintura más cara que se ha vendido en la historia'))
+    print("1. Interchange de Willem de Kooning")
+    print("2. La mona lisa")
+    print("3. El grito/n")
+    if p4==2:
+        tk=tk+1
+        
+    p5=int(input('La losa de mármol que utilizó Miguel Ángel para crear el famoso ‘David’ es ______'))
+    print("1. Protegida")
+    print("2. Original")
+    print("3. Reciclada/n")
+    if p5==3:
+        tk=tk+1
+    print('su puntuaje total fue de: \n',tk,'/5')
+    if tk>=3:
+        print('Usted ha aprobado el exámen')
+        cont=int(df.loc[[correo],'Examenes aprovados'])
+        cont= cont +1
+        df.loc[[correo],'Examenes aprovados']=cont
+        df.to_csv('ESTADISTICAS.csv')
+    else:
+        print('Usted ha reporbado el exámen')
+        cont=int(df.loc[[correo],'Examenes reprobados'])
+        cont= cont +1
+        df.loc[[correo],'Examenes reprobados']=cont
+        df.to_csv('ESTADISTICAS.csv')
+    tO=tk*5 
+    
+    for user in personas:
+        if user['Correo']==correo :
+            vA= int(user['Tokens'])
+            print('Tokens actuales: ', vA)
+            print('Sus tokens obtenidos fueron: ',tO)
+            nV = vA + tO
+            print('Su nuevo puntuaje de tokens es de: ', nV)
+            
+            user['Tokens']=str(nV)
+    
     
 
 def obTok(personas,correo,df):
@@ -218,11 +435,21 @@ def obTok(personas,correo,df):
         print('3. Ingles')
         print('4. Sociales')
         print('5. Artes')
+        print('6. Salir')
         opcion = int(input("Ingrese su opción: "))
         if opcion == 1:
             Mate(personas,correo,df)
         if opcion == 2:
             Lenguaje(personas,correo,df)
+        if opcion == 3:
+            Ingles(personas,correo,df)
+        if opcion == 4:
+            Sociales(personas,correo,df)
+        if opcion == 5:
+            Artes(personas,correo,df)
+        if opcion == 6:
+            RealizarExamen = False
+            
             
         
 
