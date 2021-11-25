@@ -70,14 +70,13 @@ def insert(personas,correo,usuario,contra,nombre,apellido,ide,grado,df):
         personas.append(valorAgregado)
     return verificar
 
-def obTok(personas,correo,df):
-    
+
+def Mate(personas,correo,df):
     cont=int(df.loc[[correo],'Examenes hechos'])
     cont= cont +1
     df.loc[[correo],'Examenes hechos']=cont
     df.to_csv('ESTADISTICAS.csv')
-    
-    print('-----------Este es un simulacro----------')
+    print('-----------MATEMÁTICAS----------')
     print('Cada respuesta correcta vale 5 tokens, haciendo un total de 25 tokens por examen')
     p1=0
     p2=0
@@ -130,6 +129,104 @@ def obTok(personas,correo,df):
             print('Su nuevo puntuaje de tokens es de: ', nV)
             
             user['Tokens']=str(nV)
+            
+            
+def Lenguaje(personas,correo,df):
+    cont=int(df.loc[[correo],'Examenes hechos'])
+    cont= cont +1
+    df.loc[[correo],'Examenes hechos']=cont
+    df.to_csv('ESTADISTICAS.csv')
+    print('-----------LENGUAJE----------')
+    print('Cada respuesta correcta vale 5 tokens, haciendo un total de 25 tokens por examen')
+    p1=0
+    p2=0
+    p3=0
+    p4=0
+    p5=0
+    tk=0
+    
+    
+    p1=int(input('Seleccione la opción que sea sinonimo de la palabra TENER '))
+    print("1. Presentar")
+    print("2. Poseer")
+    print("3. Seleccionar/n")
+    if p1==2:
+        tk=tk+1
+        
+    p2=int(input('En la oración: "Sofia lee un libro de cuentos" cual es el sujeto'))
+    print("1. cuentos")
+    print("2. lee")
+    print("3. sofia/n")
+    if p2==3:
+        tk=tk+1
+        
+    p3=int(input('En la oración: "El chofer maneja rápido" cual es el verbo '))
+    print("1. Chofer")
+    print("2. El chofer")
+    print("3. Maneja/n")
+    if p3==3:
+        tk=tk+1
+        
+    p4=int(input('Cual es el antonimo de blanco'))
+    print("1. claro")
+    print("2. Negro")
+    print("3. Oscuro/n")
+    if p4==2:
+        tk=tk+1
+        
+    p5=int(input('De estas palabras "comer, correr, casa, agua, beber" cuantas son verbos '))
+    if p5==3:
+        tk=tk+1
+    print('su puntuaje total fue de: \n',tk,'/5')
+    if tk>=3:
+        print('Usted ha aprobado el exámen')
+        cont=int(df.loc[[correo],'Examenes aprovados'])
+        cont= cont +1
+        df.loc[[correo],'Examenes aprovados']=cont
+        df.to_csv('ESTADISTICAS.csv')
+    else:
+        print('Usted ha reporbado el exámen')
+        cont=int(df.loc[[correo],'Examenes reprobados'])
+        cont= cont +1
+        df.loc[[correo],'Examenes reprobados']=cont
+        df.to_csv('ESTADISTICAS.csv')
+    tO=tk*5 
+    
+    for user in personas:
+        if user['Correo']==correo :
+            vA= int(user['Tokens'])
+            print('Tokens actuales: ', vA)
+            print('Sus tokens obtenidos fueron: ',tO)
+            nV = vA + tO
+            print('Su nuevo puntuaje de tokens es de: ', nV)
+            
+            user['Tokens']=str(nV)
+    
+    
+
+def obTok(personas,correo,df):
+    
+    cont=int(df.loc[[correo],'Examenes hechos'])
+    cont= cont +1
+    df.loc[[correo],'Examenes hechos']=cont
+    df.to_csv('ESTADISTICAS.csv')
+    RealizarExamen = True
+    while == true:
+        print('-----------EXAMEN POR ASIGNATURA----------')
+        print('1. Matemática')
+        print('2. Lenguaje')
+        print('3. Ingles')
+        print('4. Sociales')
+        print('5. Artes')
+        opcion = int(input("Ingrese su opción: "))
+        if opcion == 1:
+            Mate(personas,correo,df)
+        if opcion == 2:
+            Lenguaje(personas,correo,df)
+            
+        
+
+        
             
 def save(archivo, personas):
     cont = "Correo,Usuario,Contra,Nombre,Apellido,ID,puntE,Tokens,Grado"
