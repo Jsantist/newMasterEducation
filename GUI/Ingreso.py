@@ -29,10 +29,6 @@ class Ingreso(QDialog):
         self.info=Info()
         self.info.show()
 
-
-
-
-
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     GUI = Ingreso()
