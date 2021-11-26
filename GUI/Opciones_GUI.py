@@ -2,7 +2,6 @@ import sys
 from PyQt5 import uic
 from PyQt5.QtWidgets import QMainWindow, QApplication, QDialog
 from verDatos_GUI import Dat
-from canjTokens_GUI import Canj
 from Datos import Examenes
 import pandas as pd
 

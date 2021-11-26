@@ -8,12 +8,18 @@ class Archivos:
         exisC = correo in dfr1.Correo.values
 
         if exisC:
+            try:
 
-            contraE = str(dfr.loc[correo]['Contra'])
-            estadoE = str(dfr.loc[correo]['Estado'])
+                contraE = str(dfr.loc[correo]['Contra'])
+                estadoE = str(dfr.loc[correo]['Estado'])
+            except Exception as e:
+                print("error en loc", e)
 
-            if contraE == contra & estadoE == estado:
-                verificar = True
+            try:
+                if contraE == contra and estadoE == estado:
+                    verificar = True
+            except Exception as e :
+                print(" error en evaluador if verificar ",e)
 
         if exisC == True & verificar ==  True :
             verificar2 = True

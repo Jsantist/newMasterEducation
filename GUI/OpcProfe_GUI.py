@@ -15,6 +15,7 @@ class Oprofe(QDialog):
         self.butVc.clicked.connect(self.cantEst)
         self.butGraf1.clicked.connect(self.grafEx)
         self.butGraf2.clicked.connect(self.grafPt)
+        self.butonSalir.clicked.connect(self.close)
 
     def verDatos(self):
         self.est=Est()
