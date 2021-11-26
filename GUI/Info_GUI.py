@@ -1,12 +1,16 @@
 import sys
 from PyQt5 import uic,QtWidgets
+
 from PyQt5.QtWidgets import QMainWindow, QApplication, QDialog
 
 class Info(QDialog):
     def __init__(self):
         super().__init__()
         uic.loadUi("Info.ui",self)
-        self.regresar.clicked.connect(self.close)
+        self.regresar.clicked.connect(self.salir)
+    def salir(self):
+
+        self.close()
 
 
 

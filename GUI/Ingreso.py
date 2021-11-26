@@ -18,14 +18,17 @@ class Ingreso(QDialog):
         self.reg.show()
 
 
+
     def butIn(self):
         self.ini= Inicio()
         self.ini.show()
 
 
+
     def butInfo(self):
         self.info=Info()
         self.info.show()
+
 
 
 

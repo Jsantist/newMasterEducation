@@ -34,10 +34,10 @@
     <string>Bienvenido de nuevo</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="butVd">
    <property name="geometry">
     <rect>
-     <x>60</x>
+     <x>40</x>
      <y>80</y>
      <width>101</width>
      <height>31</height>
@@ -53,30 +53,11 @@
     <string>Ver Datos</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_6">
+  <widget class="QPushButton" name="butCt">
    <property name="geometry">
     <rect>
-     <x>230</x>
+     <x>200</x>
      <y>80</y>
-     <width>141</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Century Gothic</family>
-     <pointsize>12</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>Modificar datos</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_7">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>130</y>
      <width>181</width>
      <height>31</height>
     </rect>
@@ -91,7 +72,7 @@
     <string>Convierte tus tokens</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_8">
+  <widget class="QPushButton" name="butonSalir">
    <property name="geometry">
     <rect>
      <x>150</x>
@@ -110,11 +91,11 @@
     <string>Salir</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_9">
+  <widget class="QPushButton" name="butRe">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>130</y>
+     <x>120</x>
+     <y>140</y>
      <width>161</width>
      <height>31</height>
     </rect>
@@ -127,6 +108,19 @@
    </property>
    <property name="text">
     <string>Realizar exámenes</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="revisar">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>250</y>
+     <width>301</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
    </property>
   </widget>
  </widget>

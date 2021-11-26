@@ -2,6 +2,7 @@ import sys
 from PyQt5 import uic
 from PyQt5.QtWidgets import QMainWindow, QApplication, QDialog
 from Datos import Archivos
+
 import pandas as pd
 
 class Registrar(QDialog):
@@ -38,8 +39,11 @@ class Registrar(QDialog):
 
         if not arch.insert(correo, user, contra, nombre, apellido, ID, grado, tipo, estad, RegistrosP, RegistrosPo):
             self.veri.setText("El correo ingresado ya existe, por favor intente con uno nuevo")
+        else:
+            self.close()
 
-        self.close
+
+
 
 
 if __name__ == "__main__":

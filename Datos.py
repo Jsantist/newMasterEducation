@@ -2,17 +2,17 @@ import matplotlib.pyplot as plt
 import pandas
 class Archivos:
 
-    def ingreso(self, dfr1, dfr, correo, contra):
+    def ingreso(self, dfr1, dfr, correo, contra,estado):
         verificar = False
         verificar2 = False
         exisC = correo in dfr1.Correo.values
 
         if exisC:
-            print("existe el correo")
+
             contraE = str(dfr.loc[correo]['Contra'])
-            print(contraE)
-            if contraE == contra:
-                print("contraeñas iguales")
+            estadoE = str(dfr.loc[correo]['Estado'])
+
+            if contraE == contra & estadoE == estado:
                 verificar = True
 
         if exisC == True & verificar ==  True :
@@ -45,29 +45,29 @@ class Archivos:
 class Estadisticas:
     def media(self, df):
         mediaA = df['puntE'].mean()
-        print('la media de todos los puntos extras obtenidos es: ', mediaA)
+        return mediaA
 
     def contar(self,df):
         indices = len(df.index.tolist())
-        print('actualmente hay ', indices, ' usuarios registrados')
+        return indices
 
     def exUsuario(self,df, correo):
         try:
             cont = int(df.loc[[correo], 'Examenes hechos'])
-            print('el correo: ', correo, ' ha realizado ', cont, ' exámenes')
             contA = int(df.loc[[correo], 'Examenes aprovados'])
-            print(' ha aprovado ', contA, ' exámenes')
-            contB = int(df.loc[[correo], 'Examenes reprobados'])
-            print(' ha reprovado ', contB, ' exámenes')
+            contR = int(df.loc[[correo], 'Examenes reprobados'])
         except:
             print('El correo ingresado no existe')
+        lista = [cont,contA,contR]
+        return lista
 
     def puntUsuario(self,df, correo):
         try:
             cont = int(df.loc[[correo], 'No.veces de puntos canjeados'])
-            print('el correo: ', correo, ' ha canjeado puntos ', cont, ' veces')
+
         except:
             print('El correo ingresado no existe')
+        return cont
 
     def graficaEx(self,df):
         mejorI = df.sort_values(['Examenes hechos'], ascending=True)
