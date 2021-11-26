@@ -428,7 +428,7 @@ def obTok(personas,correo,df):
     df.loc[[correo],'Examenes hechos']=cont
     df.to_csv('ESTADISTICAS.csv')
     RealizarExamen = True
-    while == true:
+    while RealizarExamen == True :
         print('-----------EXAMEN POR ASIGNATURA----------')
         print('1. Matemática')
         print('2. Lenguaje')
