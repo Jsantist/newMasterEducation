@@ -438,3 +438,23 @@ class Examenes:
                 self.Artes(correo, dfe, dfr)
             if opcion == 6:
                 RealizarExamen = False
+
+    def PenT(self, correo, dfe,dfr):
+        cont = int(dfe.loc[[correo], 'No.veces de puntos canjeados'])
+        cont = cont + 1
+        dfe.loc[[correo], 'No.veces de puntos canjeados'] = cont
+        dfe.to_csv('ESTADISTICAS.csv')
+        conver = 100
+        punT= 0.0
+        puntTK = float(dfr.loc[[correo], 'Tokens'])
+        punT= puntTK/conver
+        print('Tiene ', punT, ' puntos en forma de tokens')
+        op = input(' ¿desea canjearlos?')
+        if op == 'si':
+            puntA= float(dfr.loc[[correo], 'puntE'])
+            npunt = puntA + punT
+            dfr.loc[[correo], 'puntE']=npunt
+            dfr.loc[[correo], 'Tokens']=0
+            print('Sus puntos totales son de: ', npunt)
+            print('Sus tokens actuales son de: ' + str(dfr.loc[[correo], 'Tokens']))
+            dfr.to_csv('CSV_PROYECTO.csv')
