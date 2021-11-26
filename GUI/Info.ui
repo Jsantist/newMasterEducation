@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>951</width>
+    <height>527</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>471</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Century Gothic</family>
+     <pointsize>24</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>¿Qué es MASTER EDUCATION?</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>70</y>
+     <width>881</width>
+     <height>291</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Century Gothic</family>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Es una plataforma en la cual se pueda apoyar la enseñanza de los niños
+de primero a sexto primaria, mediante una plataforma interactiva que permita
+a los tutores o a los estudiantes seleccionar el tema que quieran reforzar.
+El programa también cuenta con la implementación de exámenes a los estudiantes,
+para evaluar el progreso durante los cursos que llevaron y así mismo llegar a
+un promedio establecido para que el estudiante pueda ganar una recompensa.
+
+Las recompensas empleadas en este programa son los tokens, estos se consiguen
+mediante la realización de exámenes opcionales. Los tokens son canjeables por
+puntos extras para los estudiantes, el factor de conversión es por cada 100
+tokens se obtendrá un punto extra. Esto se realiza con el objetivo de dar
+oportunidad a los estudiantes de conseguir puntos extra, los cuales pueden
+usar a su placer.
+</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="regresar">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>400</y>
+     <width>241</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Century Gothic</family>
+     <pointsize>20</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>REGRESAR</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

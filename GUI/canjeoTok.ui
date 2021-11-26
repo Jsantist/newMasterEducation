@@ -13,95 +13,56 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QLineEdit" name="textCorreo">
+  <widget class="QPushButton" name="butBuscar">
    <property name="geometry">
     <rect>
-     <x>240</x>
-     <y>90</y>
+     <x>230</x>
+     <y>60</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Buscar</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="textBuscar">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>60</y>
      <width>113</width>
      <height>20</height>
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="textContra">
+  <widget class="QLabel" name="label_10">
    <property name="geometry">
     <rect>
-     <x>240</x>
-     <y>150</y>
-     <width>113</width>
-     <height>20</height>
+     <x>30</x>
+     <y>10</y>
+     <width>331</width>
+     <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Century Gothic</family>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Ingresa tu correo nuevamente para ver tus datos</string>
    </property>
   </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>90</y>
-     <width>71</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Century Gothic</family>
-     <pointsize>12</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="text">
-    <string>Correo</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>60</x>
-     <y>160</y>
-     <width>101</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Century Gothic</family>
-     <pointsize>12</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="text">
-    <string>Contraseña</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_3">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>20</y>
-     <width>231</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Century Gothic</family>
-     <pointsize>22</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="text">
-    <string>Inicio de sesión</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="butInicio">
-   <property name="geometry">
-    <rect>
-     <x>230</x>
-     <y>210</y>
-     <width>121</width>
+     <x>40</x>
+     <y>120</y>
+     <width>51</width>
      <height>31</height>
     </rect>
    </property>
@@ -114,16 +75,16 @@
     </font>
    </property>
    <property name="text">
-    <string>Iniciar sesión </string>
+    <string>Tienes</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="butSalir">
+  <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>76</x>
-     <y>220</y>
-     <width>75</width>
-     <height>23</height>
+     <x>110</x>
+     <y>120</y>
+     <width>51</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="font">
@@ -135,20 +96,91 @@
     </font>
    </property>
    <property name="text">
-    <string>Salir</string>
+    <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="veri">
+  <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>26</x>
-     <y>260</y>
-     <width>351</width>
-     <height>20</height>
+     <x>190</x>
+     <y>120</y>
+     <width>191</width>
+     <height>31</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Century Gothic</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="text">
-    <string/>
+    <string>puntos extras en tokens</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>160</y>
+     <width>201</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Century Gothic</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>¿Deseas canjearlos?</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_3">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>230</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Century Gothic</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Regresar</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>230</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Century Gothic</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Canjear</string>
    </property>
   </widget>
  </widget>

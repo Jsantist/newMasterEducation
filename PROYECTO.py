@@ -3,7 +3,7 @@
 MASTER EDUCATION (uso de archivo csv)
 Programa principal
 Cindy Gualim
-Jo´se Santisteban
+Jose Santisteban
 
 '''
 
@@ -12,8 +12,9 @@ from FUNCIONES_PROYECTO import *
 import pandas as pd
 
 Registros = origen('CSV_PROYECTO.csv')
-RegistrosP=pd.read_csv('CSV_PROYECTO.csv')
-estad_o=pd.read_csv('ESTADISTICAS.csv')
+RegistrosPo=pd.read_csv('GUI/CSV_PROYECTO.csv')
+RegistrosP = RegistrosPo.set_index("Correo")
+estad_o=pd.read_csv('GUI/ESTADISTICAS.csv')
 estad=estad_o.set_index('Correo')
 #variables
 

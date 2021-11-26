@@ -13,95 +13,33 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QLineEdit" name="textCorreo">
-   <property name="geometry">
-    <rect>
-     <x>240</x>
-     <y>90</y>
-     <width>113</width>
-     <height>20</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="textContra">
-   <property name="geometry">
-    <rect>
-     <x>240</x>
-     <y>150</y>
-     <width>113</width>
-     <height>20</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>60</x>
-     <y>90</y>
-     <width>71</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Century Gothic</family>
-     <pointsize>12</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="text">
-    <string>Correo</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>60</x>
-     <y>160</y>
-     <width>101</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Century Gothic</family>
-     <pointsize>12</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="text">
-    <string>Contraseña</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
      <x>30</x>
      <y>20</y>
-     <width>231</width>
-     <height>41</height>
+     <width>281</width>
+     <height>16</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <family>Century Gothic</family>
-     <pointsize>22</pointsize>
+     <pointsize>16</pointsize>
      <weight>75</weight>
      <bold>true</bold>
     </font>
    </property>
    <property name="text">
-    <string>Inicio de sesión</string>
+    <string>Bienvenido de nuevo</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="butInicio">
+  <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>230</x>
-     <y>210</y>
-     <width>121</width>
+     <x>60</x>
+     <y>80</y>
+     <width>101</width>
      <height>31</height>
     </rect>
    </property>
@@ -109,46 +47,86 @@
     <font>
      <family>Century Gothic</family>
      <pointsize>12</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
     </font>
    </property>
    <property name="text">
-    <string>Iniciar sesión </string>
+    <string>Ver Datos</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="butSalir">
+  <widget class="QPushButton" name="pushButton_6">
    <property name="geometry">
     <rect>
-     <x>76</x>
-     <y>220</y>
-     <width>75</width>
-     <height>23</height>
+     <x>230</x>
+     <y>80</y>
+     <width>141</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <family>Century Gothic</family>
      <pointsize>12</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Modificar datos</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_7">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>130</y>
+     <width>181</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Century Gothic</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Convierte tus tokens</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_8">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>200</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Century Gothic</family>
+     <pointsize>12</pointsize>
     </font>
    </property>
    <property name="text">
     <string>Salir</string>
    </property>
   </widget>
-  <widget class="QLabel" name="veri">
+  <widget class="QPushButton" name="pushButton_9">
    <property name="geometry">
     <rect>
-     <x>26</x>
-     <y>260</y>
-     <width>351</width>
-     <height>20</height>
+     <x>220</x>
+     <y>130</y>
+     <width>161</width>
+     <height>31</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Century Gothic</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
    <property name="text">
-    <string/>
+    <string>Realizar exámenes</string>
    </property>
   </widget>
  </widget>

@@ -26,6 +26,7 @@ def origen(archivo):
         dicc_personas["puntE"] = partes[6]
         dicc_personas["Tokens"] = partes[7]
         dicc_personas["Grado"] = partes[8]
+        dicc_personas["Estado"] = partes[9]
         
         
         new_list.append(dicc_personas)
@@ -45,6 +46,7 @@ def select(personas,correo):
             print('Puntos extras acumulados: '+str(user['puntE']))
             print('Tokens obtenidos: '+str(user['Tokens']))
             print('Grado actualmente cursando : '+user['Grado'])
+            print('Usted tiene el estado de:'+user['Estado'] )
             
             
 def ingreso(personas,correo,contra):
@@ -54,7 +56,7 @@ def ingreso(personas,correo,contra):
             verificar=True
     return verificar
 
-def insert(personas,correo,usuario,contra,nombre,apellido,ide,grado,df):
+def insert(personas,correo,usuario,contra,nombre,apellido,ide,grado,estado,df):
     verificar=False
     #---Pandas--
     df.loc[correo]=[usuario,0,0,0,0]
@@ -66,7 +68,7 @@ def insert(personas,correo,usuario,contra,nombre,apellido,ide,grado,df):
     if verificar==True:
         print('El correo ingresado correo ya existe')
     else:
-        valorAgregado = {"Correo" : correo, "Usuario" : usuario, "Contra" : contra, "Nombre" : nombre, "Apellido" :apellido , "ID":ide,"puntE":'0',"Tokens":'0',"Grado":grado}
+        valorAgregado = {"Correo" : correo, "Usuario" : usuario, "Contra" : contra, "Nombre" : nombre, "Apellido" :apellido , "ID":ide,"puntE":'0',"Tokens":'0',"Grado":grado,"Estado":estado}
         personas.append(valorAgregado)
     return verificar
 
@@ -407,17 +409,14 @@ def Artes(personas,correo,df):
         cont= cont +1
         df.loc[[correo],'Examenes reprobados']=cont
         df.to_csv('ESTADISTICAS.csv')
-    tO=tk*5 
-    
-    for user in personas:
-        if user['Correo']==correo :
-            vA= int(user['Tokens'])
-            print('Tokens actuales: ', vA)
-            print('Sus tokens obtenidos fueron: ',tO)
-            nV = vA + tO
-            print('Su nuevo puntuaje de tokens es de: ', nV)
-            
-            user['Tokens']=str(nV)
+    tO=tk*5
+    vA = int(dfr.loc[[correo], 'Tokens'])
+    print('Tokens actuales: ', vA)
+    print('Sus tokens obtenidos fueron: ', tO)
+    nV = vA + tO
+    print('Su nuevo puntuaje de tokens es de: ', nV)
+    dfr.loc[[correo], 'Tokens'] = str(nV)
+    dfr.to_csv('CSV_PROYECTO.csv')
     
     
 
@@ -444,7 +443,7 @@ def obTok(personas,correo,df):
         if opcion == 3:
             Ingles(personas,correo,df)
         if opcion == 4:
-            Sociales(personas,correo,df)
+            sociales(personas,correo,df)
         if opcion == 5:
             Artes(personas,correo,df)
         if opcion == 6:
@@ -456,9 +455,9 @@ def obTok(personas,correo,df):
         
             
 def save(archivo, personas):
-    cont = "Correo,Usuario,Contra,Nombre,Apellido,ID,puntE,Tokens,Grado"
+    cont = "Correo,Usuario,Contra,Nombre,Apellido,ID,puntE,Tokens,Grado,Estado"
     for user in personas:
-        cont = cont + "\n" + str(user["Correo"]) + "," + str(user["Usuario"]) + "," + str(user["Contra"]) + "," + str(user["Nombre"]) + "," + str(user["Apellido"]) + "," + str(user["ID"]) + "," + str(user["puntE"]) + "," + str(user["Tokens"]) + "," + str(user["Grado"])
+        cont = cont + "\n" + str(user["Correo"]) + "," + str(user["Usuario"]) + "," + str(user["Contra"]) + "," + str(user["Nombre"]) + "," + str(user["Apellido"]) + "," + str(user["ID"]) + "," + str(user["puntE"]) + "," + str(user["Tokens"]) + "," + str(user["Grado"]) + "," + str(user["Estado"])
     
     registros = open(archivo, 'w')
     registros.write(cont)

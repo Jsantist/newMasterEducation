@@ -243,7 +243,7 @@
     </font>
    </property>
    <property name="text">
-    <string>contraseña</string>
+    <string>Contraseña</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="User">
@@ -386,6 +386,19 @@
      <string>Profesor</string>
     </property>
    </item>
+  </widget>
+  <widget class="QLabel" name="veri">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>460</y>
+     <width>461</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
   </widget>
  </widget>
  <resources/>
